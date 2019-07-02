@@ -6,6 +6,7 @@ find_package(catkin REQUIRED COMPONENTS message_generation roscpp actionlib_msgs
 
 add_action_files(DIRECTORY action FILES SoundRequest.action)
 add_message_files(DIRECTORY msg FILES SoundRequest.msg)
+add_service_files(FILES Talk.srv)
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
