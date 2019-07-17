@@ -9,7 +9,7 @@ from sound_play.srv import Talk
 
 class SoundClientRos:
     def __init__(self):
-        s = rospy.Service('/bica_dialog/talk', Talk, self.talkCallback)
+        s = rospy.Service('/gb_dialog/talk', Talk, self.talkCallback)
     def talkCallback(self,req):
         soundhandle = SoundClient(blocking=True)
         soundhandle.say(req.str)
