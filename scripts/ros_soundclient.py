@@ -10,8 +10,8 @@ from std_srvs.srv import Empty
 
 class SoundClientRos:
     def __init__(self):
-        s_talk = rospy.Service('/gb_dialog/talk', Talk, self.talkCallback)
-        s_sound = rospy.Service('/gb_dialog/listen_sound', Empty, self.listenSoundCallback)
+        s_talk = rospy.Service('/dialog/talk', Talk, self.talkCallback)
+        s_sound = rospy.Service('/dialog/listen_sound', Empty, self.listenSoundCallback)
         self.soundhandle = SoundClient(blocking=True)
 
     def talkCallback(self,req):
